@@ -49,7 +49,7 @@ Cada app funcionará como un **cuaderno de campo interactivo**, permitiendo gest
       
       👉recomendamos vitest para la realización de test
   
-* La gestión de imágenes puede realizarse a través de Links ( ⭐será muy valorable aquellos equipos que consigan procesar imágenes ( recomendación: clodinary )
+* La gestión de imágenes puede realizarse a través de Links ( ⭐será muy valorable aquellos equipos que consigan procesar imágenes ( recomendación: cloudinary )
 
 ---
 
