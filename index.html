@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Polinizadores 🌼</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="src/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
+	<svg width="0" height="0" style="position:absolute">
+		<filter id="puffy-map" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+			<feGaussianBlur in="SourceAlpha" stdDeviation="1.5" result="blur"/>
+			<feDiffuseLighting in="blur" surfaceScale="4" lighting-color="#ffffff" result="diffuse">
+				<feDistantLight azimuth="225" elevation="40"/>
+			</feDiffuseLighting>
+			<feSpecularLighting in="blur" surfaceScale="3" specularConstant="0.7" specularExponent="18" lighting-color="#ffffff" result="spec">
+				<feDistantLight azimuth="225" elevation="40"/>
+			</feSpecularLighting>
+			<feComposite in="diffuse" in2="SourceGraphic" operator="in" result="litDiffuse"/>
+			<feComposite in="spec" in2="SourceGraphic" operator="in" result="litSpec"/>
+			<feBlend in="SourceGraphic" in2="litDiffuse" mode="screen" result="mix1"/>
+			<feBlend in="mix1" in2="litSpec" mode="overlay"/>
+		</filter>
+	</svg>
+
+	<header id="banner" aria-label="Banner animado con estampado de flores en 3D y efecto scroll">
+		<div id="flowers" aria-hidden="true"></div>
+        <div>
+		<h1 class="title">POLINIZADORES</h1>
+        <p class="sub-title">Un proyecto de FactoríaF5</p>
+    </div>
+	</header>
+
+	<main>
+		<section id="intro" class="container intro">
+			<h2>La importancia de los polinizadores</h2>
+			<p>
+				Los polinizadores, como las mariposas, abejas y escarabajos, son esenciales para la reproducción de miles de plantas y cultivos de los que dependemos.
+				En las últimas décadas sus poblaciones han disminuido debido al cambio climático, el uso de pesticidas y la pérdida de hábitats.
+				Este proyecto busca visibilizar iniciativas por continente que protegen y restauran sus ecosistemas.
+			</p>
+		</section>	
+        
+		<section class="container map" >
+			<h2>Explora por continente</h2>
+            <div id="earth-container" >
+
+            </div>
+        </section>
+
+	</main>
+
+	<footer>
+		<div class="footer-content">
+			<p>Este proyecto ha sido desarrollado como parte del programa de formación de FactoriaF5</p>
+			<p>© 2025 POLINIZADORES | <a href="https://www.linkedin.com/in/celia-mill%C3%A1n-15465184/" target="_blank">+ info</a>
+				<a href="https://factoriaf5.org" target="_blank"><article class="logotype"><img src="./assets/logo-factoria-b.svg" alt="Factoría F5"></article></a></p>
+		</div>
+	</footer>
+
+	<script src="src/index.js"></script>
+</body>
+</html>
