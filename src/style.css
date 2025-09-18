@@ -337,6 +337,19 @@ footer {
 
 /* Responsive tweaks */
 @media (max-width: 640px) {
-	#banner { height: 60vh; min-height: 380px; }
-	.container { padding: 1.5rem 1rem; }
+	#banner { height: 60vh; min-height: 380px; width: 100vw; }
+	#intro { width: 100vw; }
+	.container.intro { width: 100vw; margin:0; padding: 6rem 1rem; }
+	.container.map  {width: 100vw; margin:0; padding: 0.1rem;}
+	canvas { width: 100vw;}
+		.title {
+		white-space: normal;        /* permite saltos */
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+		max-width: 100%;            /* que no se salga del viewport */
+		display: block;             /* asegura que se ajuste al ancho */
+		text-align: center;   
+		font-size: 2rem;      /* opcional, queda bonito en móvil */
+	}
+
 }
